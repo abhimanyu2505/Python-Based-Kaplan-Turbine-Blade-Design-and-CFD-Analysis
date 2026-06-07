@@ -4,125 +4,157 @@
 
 This project presents the design, modelling, and CFD analysis of a Kaplan turbine runner using Python-generated NACA airfoil profiles and ANSYS Fluent simulations.
 
-The objective was to investigate the effect of blade twist on turbine performance and compare the hydraulic characteristics of twisted and untwisted runner blade configurations.
+The objective was to investigate the influence of blade twist on turbine performance and compare the hydraulic characteristics of twisted and untwisted Kaplan turbine runner configurations.
 
 ---
 
 ## Project Workflow
 
 Hydraulic Design Calculations
-→ NACA Airfoil Generation (Python)
-→ Blade Section Creation
-→ CAD Modelling
-→ ANSYS Meshing
-→ CFD Analysis
-→ Performance Evaluation
+
+↓
+
+NACA 4-Digit Airfoil Generation (Python)
+
+↓
+
+Blade Section Generation
+
+↓
+
+CAD Modelling
+
+↓
+
+ANSYS Meshing
+
+↓
+
+CFD Analysis
+
+↓
+
+Performance Evaluation
 
 ---
 
-## Airfoil Generation Using Python
+# Python-Based Airfoil Generation
 
-A custom Python-based airfoil generator was developed to:
+A custom Python workflow was developed to:
 
 - Generate NACA 4-digit airfoil profiles
-- Calculate blade geometry parameters
-- Create blade sections along the span
+- Calculate hydraulic design parameters
+- Generate blade sections along the span
 - Export DXF files for CAD modelling
 
-### Technologies Used
+### Airfoil Generation Output
 
-- Python
-- NumPy
-- Matplotlib
-- ezdxf
-
----
-
-## CAD Modelling
-
-The generated airfoil sections were imported into CAD software to create:
-
-- Kaplan Runner Blade
-- Turbine Runner Assembly
-- Turbine Casing
-
-### Turbine Casing
-
-![Casing](Images/Turbine_Casing.png)
+<p align="center">
+<img src="Images/Plot_Generated.png" width="650">
+</p>
 
 ---
 
-## CFD Setup
+# Kaplan Turbine Assembly
 
-ANSYS Fluent was used for:
-
-- Flow analysis
-- Pressure distribution study
-- Velocity distribution study
-- Performance comparison
-
-### Computational Mesh
-
-![Mesh](Images/CFD_Mesh.png)
+<p align="center">
+<img src="Images/Kaplan_Turbine_Assembly.png" width="600">
+</p>
 
 ---
 
-## Velocity Streamline Analysis
+# Turbine Runner Blade
 
-### Top View
-
-![Velocity Top](Images/Velocity_Streamlines_Top_View.png)
-
-### Side View
-
-![Velocity Side](Images/Velocity_Streamlines_Side_View.png)
+<p align="center">
+<img src="Images/B.png" width="500">
+</p>
 
 ---
 
-## Pressure Contour Analysis
+# Turbine Casing
 
-![Pressure](Images/Pressure_Contour_Analysis.png)
-
----
-
-## Performance Comparison
-
-### Velocity Distribution
-
-#### Untwisted Blade
-
-![Velocity Untwisted](Images/Velocity_Profile_Untwisted_Blade.png)
-
-#### Twisted Blade
-
-![Velocity Twisted](Images/Velocity_Profile_Twisted_Blade.png)
-
-### Pressure Distribution
-
-#### Untwisted Blade
-
-![Pressure Untwisted](Images/Pressure_Profile_Untwisted_Blade.png)
-
-#### Twisted Blade
-
-![Pressure Twisted](Images/Pressure_Profile_Twisted_Blade.png)
+<p align="center">
+<img src="Images/Casinf final.png" width="500">
+</p>
 
 ---
 
-## Key Results
+# Computational Mesh
+
+<p align="center">
+<img src="Images/CFD_Mesh.png" width="700">
+</p>
+
+The CFD domain was discretized using an unstructured mesh and imported into ANSYS Fluent for flow analysis.
+
+---
+
+# Performance Comparison
+
+<p align="center">
+<img src="Images/Performance_Comparison.png" width="700">
+</p>
+
+---
+
+# Velocity Distribution Comparison
+
+## Untwisted Blade
+
+<p align="center">
+<img src="Images/Simulation Results/Graphs/Velocity_Profile_Untwisted_Blade.jpg" width="700">
+</p>
+
+## Twisted Blade
+
+<p align="center">
+<img src="Images/Simulation Results/Graphs/Velocity_Profile_Twisted_Blade.jpg" width="700">
+</p>
+
+---
+
+# Pressure Distribution Comparison
+
+## Untwisted Blade
+
+<p align="center">
+<img src="Images/Simulation Results/Graphs/Pressure_Profile_Untwisted_Blade.jpg" width="700">
+</p>
+
+## Twisted Blade
+
+<p align="center">
+<img src="Images/Simulation Results/Graphs/Pressure_Profile_Twisted_Blade.jpg" width="700">
+</p>
+
+---
+
+# Key Results
 
 | Parameter | Untwisted Blade | Twisted Blade |
 |------------|------------|------------|
 | Maximum Velocity | 41.85 m/s | 122 m/s |
 | Maximum Pressure | 300 Pa | 1000 Pa |
 | Hydraulic Efficiency | 76.48% | 93.38% |
-| Flow Distribution | Less Uniform | More Uniform |
+| Flow Uniformity | Moderate | High |
 
-The twisted blade configuration demonstrated significantly improved hydraulic performance and energy extraction compared to the untwisted blade design.
+The twisted blade configuration demonstrated significantly higher hydraulic efficiency and improved flow characteristics compared to the untwisted blade design.
 
 ---
 
-## Repository Structure
+# Software and Tools
+
+- Python
+- NumPy
+- Matplotlib
+- ezdxf
+- CAD Modelling
+- ANSYS Fluent
+- CFD Analysis
+
+---
+
+# Repository Structure
 
 ```text
 CAD/
@@ -136,29 +168,19 @@ README.md
 
 ---
 
-## Software Used
-
-- Python
-- NumPy
-- Matplotlib
-- ezdxf
-- CAD Software
-- ANSYS Fluent
-
----
-
-## Future Work
+# Future Scope
 
 - Automated blade optimization
-- Parametric turbine design
-- Multi-objective optimization
-- Integration with AI-assisted design workflows
+- Parametric turbine sizing
+- Multi-objective design optimization
+- AI-assisted turbine blade generation
 
 ---
 
-## Author
+# Author
 
 **Rugwed Ushir**
 
-B.Tech Mechanical Engineering  
+B.Tech Mechanical Engineering
+
 Vishwakarma Institute of Technology, Pune
